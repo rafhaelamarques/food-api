@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class State {
+public class LocationState {
 
     @Id
     @EqualsAndHashCode.Include

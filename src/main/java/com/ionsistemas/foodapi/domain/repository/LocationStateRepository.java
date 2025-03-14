@@ -1,9 +1,9 @@
 package com.ionsistemas.foodapi.domain.repository;
 
-import com.ionsistemas.foodapi.domain.model.State;
+import com.ionsistemas.foodapi.domain.model.LocationState;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StateRepository extends JpaRepository<State, Long> {
+public interface LocationStateRepository extends JpaRepository<LocationState, Long> {
 }

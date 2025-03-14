@@ -19,5 +19,5 @@ public class City {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private State state;
+    private LocationState state;
 }
