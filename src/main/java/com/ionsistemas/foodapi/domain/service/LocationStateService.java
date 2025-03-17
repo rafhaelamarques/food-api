@@ -5,6 +5,7 @@ import com.ionsistemas.foodapi.domain.repository.LocationStateRepository;
 import com.ionsistemas.foodapi.exception.status.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,5 +25,16 @@ public class LocationStateService {
 
     public LocationState findById(Long id) {
         return locationStateRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Kitchen not found"));
+    }
+
+    @Transactional
+    public LocationState save(LocationState locationState){
+        return locationStateRepository.save(locationState);
+    }
+
+    @Transactional
+    public void delete(Long id){
+        LocationState locationState = findById(id);
+        locationStateRepository.delete(locationState);
     }
 }

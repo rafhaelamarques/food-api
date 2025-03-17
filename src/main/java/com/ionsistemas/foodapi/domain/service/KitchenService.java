@@ -3,9 +3,10 @@ package com.ionsistemas.foodapi.domain.service;
 import com.ionsistemas.foodapi.domain.model.Kitchen;
 import com.ionsistemas.foodapi.domain.repository.KitchenRepository;
 import com.ionsistemas.foodapi.exception.status.ResourceNotFoundException;
-import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

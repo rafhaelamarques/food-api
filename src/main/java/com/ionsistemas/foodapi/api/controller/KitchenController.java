@@ -34,7 +34,7 @@ public class KitchenController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Kitchen> add(@RequestBody Kitchen kitchen) {
-        return  ResponseEntity.ok(kitchenService.save(kitchen));
+        return ResponseEntity.ok(kitchenService.save(kitchen));
     }
 
     @PutMapping("/{id}")
